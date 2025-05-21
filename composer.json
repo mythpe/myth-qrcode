@@ -1,0 +1,51 @@
+{
+  "name": "4myth/qrcode",
+  "description": "MyTh Qr Code generator made for Laravel.",
+  "keywords": [
+    "myth",
+    "qrcode",
+    "laravel",
+    "generator",
+    "wrapper"
+  ],
+  "homepage": "https://www.4myth.com",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "MyTh Ahmed Faiz",
+      "email": "mythpe@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.2|^8.0",
+    "ext-gd": "*",
+    "bacon/bacon-qr-code": "^3.0"
+  },
+  "require-dev": {
+    "mockery/mockery": "~1",
+    "phpunit/phpunit": "~9"
+  },
+  "suggest": {
+    "ext-imagick": "Allows the generation of PNG QrCodes.",
+    "illuminate/support": "Allows for use within Laravel."
+  },
+  "autoload": {
+    "psr-4": {
+      "Myth\\QrCode\\": "src"
+    }
+  },
+  "scripts": {
+    "test": "phpunit"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Myth\\QrCode\\QrCodeServiceProvider"
+      ],
+      "aliases": {
+        "QrCode": "Myth\\QrCode\\Facades\\QrCode"
+      }
+    }
+  },
+  "minimum-stability": "dev"
+}
