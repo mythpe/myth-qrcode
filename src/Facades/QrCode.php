@@ -5,6 +5,7 @@ namespace Myth\QrCode\Facades;
 use Illuminate\Support\Facades\Facade;
 use Myth\QrCode\Generator;
 
+/** @mixin Generator */
 class QrCode extends Facade
 {
     /**

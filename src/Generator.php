@@ -28,6 +28,7 @@ use BaconQrCode\Renderer\RendererStyle\GradientType;
 use BaconQrCode\Renderer\RendererStyle\RendererStyle;
 use BaconQrCode\Writer;
 use BadMethodCallException;
+use Illuminate\Support\HtmlString;
 use InvalidArgumentException;
 use Myth\QrCode\DataTypes\DataTypeInterface;
 
@@ -148,6 +149,7 @@ class Generator
      *
      * @param $method
      * @param array $arguments
+     * @return HtmlString|Illuminate\Support\HtmlString|string|null
      */
     public function __call($method, array $arguments)
     {
